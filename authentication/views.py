@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 
@@ -44,6 +45,7 @@ def signup(request):
                     )
                     messages.success(
                         request, "Signup Successful <br> Login Here")
+                    
                     return redirect(login)
             else:
                 return render(request, 'signup.html', {'error': "Empty Fields"})

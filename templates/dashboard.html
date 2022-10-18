@@ -1,8 +1,9 @@
 {% extends 'nav.html' %}
+{% load static %}
 
 {% block content %}
 
-<div class="container shadow p-4">
+<div class="container shadow p-4" id="particles-js">
     <div class="row">
         <div class="col-12 text-center py-2">
             <h3>Shorten A Url</h3>
@@ -72,7 +73,7 @@
 
 <!-- == Little Better View With Delete  -->
 
-<div class="container my-4">
+<div class="container my-4" id="particles-js">
     <div class="row">
         <div class="col-12 text-center">
             <h4>Your Url's</h4>
@@ -123,6 +124,13 @@
         max-width: 100%;
         height: 100%;
     }
+    #particles-js{
+        width: 100%;
+        height: 100%; 
+        position:relative;
+        
+        background-color:#4398FF; 
+        }
 </style>
 
 
@@ -135,6 +143,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
+<script src="{% static 'js/particles.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
 
 </body>
 
